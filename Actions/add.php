@@ -14,6 +14,9 @@
             return false;
         }
 
+        $cnpj = preg_replace("/[^0-9]/", "", $cnpj);
+        $cnpj = str_pad($cnpj, 14, '0', STR_PAD_LEFT);
+
         if (strlen($cnpj) != 14) {
             return false;
         }
